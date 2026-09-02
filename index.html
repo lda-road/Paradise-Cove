@@ -1,0 +1,1770 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>TOURISM WEBSITE</title>
+  </head>
+  <body>
+    <header class="sticky-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- Brand -->
+          <h1 class="brand-name">Paradise Cave</h1>
+
+          <!-- Burger Menu -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navigation -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <!--================================
+                        NAVIGATION LINKS
+                 =====================================-->
+
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Home">
+                  HOME
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#about"> About </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#attractions"> Attractions </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#activities"> Activities </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#travel-Guide"> Travel Guide </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#gallery"> Gallery </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#FaQ"> FaQ </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"> Contact </a>
+              </li>
+            </ul>
+
+            <!--=================================
+                    BUTTON PLAN YOUR TRIP
+            ======================================-->
+            <button
+              class="btn btn-outline-success"
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              Plan Your Trip
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- PLAN YOUR TRIP MODAL -->
+    <div
+      class="modal fade"
+      id="planTripModal"
+      tabindex="-1"
+      aria-labelledby="planTripModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h2 class="modal-title" id="planTripModalLabel">
+              <i class="bi bi-calendar-check me-1"></i>Plan Your Visit
+            </h2>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <p class="text-muted mb-4">
+              Plan your visit to Paradise Cave by filling out the form below.
+            </p>
+
+            <form>
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label for="fullName" class="form-label"> Full Name </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label"> Email Address </label>
+
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+
+              <!-- Date and Visitors -->
+              <div class="row">
+                <!-- Visit Date -->
+                <div class="col-md-6 mb-3">
+                  <label for="visitDate" class="form-label">
+                    Date of Visit
+                  </label>
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="visitDate"
+                    required
+                  />
+                </div>
+
+                <!-- Number of Visitors -->
+                <div class="col-md-6 mb-3">
+                  <label for="visitors" class="form-label">
+                    Number of Visitors
+                  </label>
+
+                  <select class="form-select" id="visitors" required>
+                    <option value="" selected disabled>Select number</option>
+                    <option value="1">1 Visitor</option>
+                    <option value="2">2 Visitors</option>
+                    <option value="3">3 Visitors</option>
+                    <option value="4">4 Visitors</option>
+                    <option value="5">5 Visitors</option>
+                    <option value="6">6+ Visitors</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Visit Type -->
+              <div class="mb-3">
+                <label for="visitType" class="form-label"> Visit Type </label>
+
+                <select class="form-select" id="visitType" required>
+                  <option value="" selected disabled>Select visit type</option>
+                  <option value="day-tour">Day Tour</option>
+                  <option value="group-tour">Group Tour</option>
+                  <option value="family-trip">Family Trip</option>
+                </select>
+              </div>
+
+              <!-- Activities -->
+              <div class="mb-3">
+                <label class="form-label">
+                  Activities You Are Interested In
+                </label>
+
+                <div class="row">
+                  <!-- Mountain Hiking -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="Mountain Hiking"
+                        id="mountainHiking"
+                      />
+                      <label class="form-check-label" for="mountainHiking">
+                        Mountain Hiking
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Beach Adventure -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="Beach Adventure"
+                        id="beachAdventure"
+                      />
+                      <label class="form-check-label" for="beachAdventure">
+                        Beach Adventure
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Cultural Tour -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="Cultural Tour"
+                        id="culturalTour"
+                      />
+                      <label class="form-check-label" for="culturalTour">
+                        Cultural Tour
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Cycling -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="Cycling"
+                        id="cycling"
+                      />
+                      <label class="form-check-label" for="cycling">
+                        Cycling
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Photography -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="Photography"
+                        id="photography"
+                      />
+                      <label class="form-check-label" for="photography">
+                        Photography
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- City Exploration -->
+                  <div class="col-12 col-lg-4 mb-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="City Exploration"
+                        id="cityExploration"
+                      />
+                      <label class="form-check-label" for="cityExploration">
+                        City Exploration
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-end">
+                <button type="submit" class="btn btn-success">
+                  Book Your Visit
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <small class="text-muted">
+              Thank you for planning your visit to Paradise Cave!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO CAROUSEL -->
+    <section id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="3"
+        ></button>
+      </div>
+
+      <!-- First -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            class="d-flex align-items-center"
+            style="
+              height: 100vh;
+              min-height: 620px;
+              background-image:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.75),
+                  rgba(0, 0, 0, 0.25)
+                ),
+                url(&quot;https://i.pinimg.com/1200x/9f/d9/a9/9fd9a93112c286a8c7a8b8ff5684eb08.jpg&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="container">
+              <div class="col-lg-6 text-white ps-lg-5">
+                <p
+                  class="text-uppercase fw-semibold mb-2"
+                  style="letter-spacing: 3px"
+                >
+                  Discover Your
+                </p>
+                <h1 class="display-1 fw-bold fst-italic mb-1">Paradise</h1>
+                <h2 class="text-info text-uppercase fw-bold mb-3">
+                  Adventure Awaits
+                </h2>
+                <p class="mb-4 col-10">
+                  Crystal clear waters, breathtaking landscapes, and
+                  unforgettable experiences. Paradise Cove is your perfect
+                  getaway.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a
+                    href="#"
+                    class="btn btn-info text-white fw-semibold px-4 py-2"
+                    >Explore Now <i class="bi bi-arrow-right-short ms-1"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light fw-semibold px-4 py-2"
+                    ><i class="bi bi-play-circle me-1"></i> View Gallery</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Second -->
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center"
+            style="
+              height: 100vh;
+              min-height: 620px;
+              background-image:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.75),
+                  rgba(0, 0, 0, 0.25)
+                ),
+                url(&quot;https://i.pinimg.com/736x/b2/21/4a/b2214a531cd3a939987dd2c19808f76a.jpg&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="container">
+              <div class="col-lg-6 text-white ps-lg-5">
+                <p
+                  class="text-uppercase fw-semibold mb-2"
+                  style="letter-spacing: 3px"
+                >
+                  Discover Your
+                </p>
+                <h1 class="display-1 fw-bold fst-italic mb-1">Escape</h1>
+                <h2 class="text-info text-uppercase fw-bold mb-3">
+                  The Everyday
+                </h2>
+                <p class="mb-4 col-10">
+                  Hidden coves, swaying palms, and sunsets that stay with you
+                  long after you leave.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a
+                    href="#"
+                    class="btn btn-info text-white fw-semibold px-4 py-2"
+                    >Explore Now <i class="bi bi-arrow-right-short ms-1"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light fw-semibold px-4 py-2"
+                    ><i class="bi bi-play-circle me-1"></i> View Gallery</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third -->
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center"
+            style="
+              height: 100vh;
+              min-height: 620px;
+              background-image:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.75),
+                  rgba(0, 0, 0, 0.25)
+                ),
+                url(&quot;https://i.pinimg.com/1200x/45/91/43/4591437c8fe04816944a9ae5c7d2e39c.jpg&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="container">
+              <div class="col-lg-6 text-white ps-lg-5">
+                <p
+                  class="text-uppercase fw-semibold mb-2"
+                  style="letter-spacing: 3px"
+                >
+                  Discover Your
+                </p>
+                <h1 class="display-1 fw-bold fst-italic mb-1">Wonder</h1>
+                <h2 class="text-info text-uppercase fw-bold mb-3">
+                  Explore The Coast
+                </h2>
+                <p class="mb-4 col-10">
+                  Turquoise lagoons and limestone cliffs waiting to be explored,
+                  one adventure at a time.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a
+                    href="#"
+                    class="btn btn-info text-white fw-semibold px-4 py-2"
+                    >Explore Now <i class="bi bi-arrow-right-short ms-1"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light fw-semibold px-4 py-2"
+                    ><i class="bi bi-play-circle me-1"></i> View Gallery</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fourth -->
+        <div class="carousel-item">
+          <div
+            class="d-flex align-items-center"
+            style="
+              height: 100vh;
+              min-height: 620px;
+              background-image:
+                linear-gradient(
+                  90deg,
+                  rgba(0, 0, 0, 0.75),
+                  rgba(0, 0, 0, 0.25)
+                ),
+                url(&quot;https://i.pinimg.com/1200x/18/bd/d1/18bdd13e7f1ac365ef3ff3365be092a0.jpg&quot;);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="container">
+              <div class="col-lg-6 text-white ps-lg-5">
+                <p
+                  class="text-uppercase fw-semibold mb-2"
+                  style="letter-spacing: 3px"
+                >
+                  Discover Your
+                </p>
+                <h1 class="display-1 fw-bold fst-italic mb-1">Serenity</h1>
+                <h2 class="text-info text-uppercase fw-bold mb-3">
+                  Island Life Awaits
+                </h2>
+                <p class="mb-4 col-10">
+                  Slow down, breathe deep, and let the island rhythm carry you
+                  away.
+                </p>
+                <div class="d-flex flex-wrap gap-3">
+                  <a
+                    href="#"
+                    class="btn btn-info text-white fw-semibold px-4 py-2"
+                    >Explore Now <i class="bi bi-arrow-right-short ms-1"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="btn btn-outline-light fw-semibold px-4 py-2"
+                    ><i class="bi bi-play-circle me-1"></i> View Gallery</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <!-- ABOUT INTRO -->
+        <div class="row align-items-center g-5 mb-5">
+          <!-- LEFT: TEXT -->
+          <div class="col-lg-6">
+            <p class="sect-head eyebrow mb-2">About the Destination</p>
+
+            <h1 class="hero-heading display-5 fw-bold mb-3">
+              Nature. Culture. Adventure.
+            </h1>
+
+            <p class="hero-copy mb-4">
+              Paradise Cove is a tropical destination blessed with natural
+              beauty, rich history, and vibrant culture. It is a place where
+              mountains meet the sea, creating unforgettable experiences for
+              every traveler.
+            </p>
+
+            <!-- Bootstrap Badges -->
+            <div class="mb-4">
+              <span class="badge rounded-pill text-bg-success me-2 mb-2">
+                Natural Beauty
+              </span>
+
+              <span class="badge rounded-pill text-bg-primary me-2 mb-2">
+                Local Culture
+              </span>
+
+              <span class="badge rounded-pill text-bg-warning mb-2">
+                Adventure
+              </span>
+            </div>
+
+            <!-- Bootstrap Accordion -->
+            <div class="accordion" id="aboutAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#whyVisit"
+                  >
+                    Why Paradise Cove?
+                  </button>
+                </h2>
+
+                <div
+                  id="whyVisit"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#aboutAccordion"
+                >
+                  <div class="accordion-body">
+                    Paradise Cove offers a relaxing escape while allowing
+                    visitors to experience nature, explore local traditions,
+                    enjoy delicious food, and discover exciting outdoor
+                    activities.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#experience"
+                  >
+                    What Can You Experience?
+                  </button>
+                </h2>
+
+                <div
+                  id="experience"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#aboutAccordion"
+                >
+                  <div class="accordion-body">
+                    Visitors can enjoy beaches, scenic landscapes, cultural
+                    experiences, local cuisine, and outdoor adventures
+                    surrounded by beautiful tropical scenery.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: IMAGE -->
+          <div class="col-lg-6">
+            <div class="hero-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=80"
+                class="img-fluid rounded-4 shadow"
+                alt="Paradise Cove lagoon with traditional boats surrounded by limestone cliffs"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= HIGHLIGHTS ================= -->
+        <div class="text-center mb-4">
+          <p class="sect-head eyebrow mb-2">Discover Paradise</p>
+          <h2 class="fw-bold">What Makes It Special?</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- HISTORY CARD -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm highlight-card">
+              <div class="card-body text-center p-4">
+                <div class="icon-badge mb-3">
+                  <i class="bi bi-hourglass-split"></i>
+                </div>
+
+                <h4 class="card-title fw-bold">Rich History</h4>
+
+                <p class="text-muted card-text">
+                  Discover a destination with a story shaped by centuries of
+                  trade, tradition, and resilience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CULTURE CARD -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm highlight-card">
+              <div class="card-body text-center p-4">
+                <div class="icon-badge mb-3">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+
+                <h4 class="card-title fw-bold">Vibrant Culture</h4>
+
+                <p class="text-muted card-text">
+                  Experience local traditions, delicious food, and warm
+                  hospitality that make every visitor feel welcome.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- NATURE CARD -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm highlight-card">
+              <div class="card-body text-center p-4">
+                <div class="icon-badge mb-3">
+                  <i class="bi bi-tree-fill"></i>
+                </div>
+
+                <h4 class="card-title fw-bold">Natural Wonderland</h4>
+
+                <p class="text-muted card-text">
+                  Explore pristine beaches, lush hillsides, and beautiful
+                  ecosystems filled with unique wildlife.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= MISSION ================= -->
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-9">
+            <div
+              class="mission-section text-center p-4 p-md-5 rounded-4 shadow-sm"
+            >
+              <span class="badge text-bg-success mb-3"> Our Purpose </span>
+
+              <h3 class="fw-bold">Our Mission</h3>
+
+              <p class="text-muted mx-auto mb-0">
+                To promote sustainable tourism and preserve the natural beauty
+                of Paradise Cove so that future generations can continue to
+                experience and appreciate its natural and cultural treasures.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==================================
+            TOP ATTRACTIONS SECTION
+     =======================================-->
+    <section class="attr" id="attractions">
+      <div class="container">
+        <!-- Section heading -->
+        <p class="sect-head text-uppercase small fw-semibold mb-2">
+          Top Attractions
+        </p>
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h2 class="fw-bold mb-2">Explore the Best of Paradise Cove</h2>
+            <p class="text-muted">
+              Discover breathtaking beaches, lagoons, waterfalls, marine
+              sanctuaries, and viewpoints inspired by some of the country's most
+              iconic destinations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Attraction cards -->
+        <div class="row g-4">
+          <!-- Attraction 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/crystal-beach.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Crystal Beach
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Crystal Beach Resort, San Narciso, Zambales. A
+                  beautiful white sand beach known for surfing, relaxing
+                  sunsets, and crystal clear waters.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/secret-lagoon.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Secret Lagoon
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Secret Lagoon, El Nido, Palawan. A hidden paradise
+                  surrounded by towering limestone cliffs and turquoise waters.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/kawasan-falls.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Tuklas Falls
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Kawasan Falls, Badian, Cebu. Famous for its
+                  turquoise waters, scenic cascades, and thrilling canyoneering
+                  experience.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 4 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/sunset-cove.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Sunset Cove
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Nacpan Beach, El Nido, Palawan. Famous for its
+                  golden shoreline and breathtaking sunset views over the sea.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 5 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/marine-sanctuary.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Marine
+                  Sanctuary
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Apo Island Marine Reserve, Dauin, Negros Oriental.
+                  Known for its vibrant coral gardens, sea turtles, and
+                  exceptional marine biodiversity.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Attraction 6 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <video class="card-img-top" autoplay muted loop playsinline>
+                <source src="videos/island-viewpoint.mp4" type="video/mp4" />
+              </video>
+              <div class="card-body">
+                <h5 class="card-title mb-1">
+                  <i class="bi bi-geo-alt-fill text-info me-1"></i>Island
+                  Viewpoint
+                </h5>
+                <p class="card-text text-muted">
+                  Inspired by Taraw Cliff, El Nido, Palawan. Famous for its
+                  stunning panoramic views of El Nido's limestone cliffs,
+                  islands, and crystal clear waters.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activities & Things to Do -->
+    <section class="act" id="activities">
+      <div class="container">
+        <!-- SECTION TITLE -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold">Activities & Things to Do</h2>
+          <p class="text-muted">
+            Discover exciting activities and unforgettable experiences.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- ================= ACTIVITY 1 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-compass fs-1 mb-3"></i>
+                <h5 class="card-title">Mountain Hiking</h5>
+                <p class="text-muted">
+                  Explore beautiful trails and enjoy amazing mountain views.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#hikingModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ================= ACTIVITY 2 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-water fs-1 mb-3"></i>
+                <h5 class="card-title">Beach Adventure</h5>
+                <p class="text-muted">
+                  Relax on the beach, swim in clear waters, and enjoy the
+                  sunshine.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#beachModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ================= ACTIVITY 3 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-building fs-1 mb-3"></i>
+                <h5 class="card-title">Cultural Tour</h5>
+                <p class="text-muted">
+                  Discover local traditions, historical places, and unique
+                  cultures.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cultureModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ================= ACTIVITY 4 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-bicycle fs-1 mb-3"></i>
+                <h5 class="card-title">Cycling</h5>
+                <p class="text-muted">
+                  Ride through beautiful destinations and enjoy outdoor
+                  adventures.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cyclingModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ================= ACTIVITY 5 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-camera fs-1 mb-3"></i>
+                <h5 class="card-title">Photography</h5>
+                <p class="text-muted">
+                  Capture beautiful landscapes, landmarks, and unforgettable
+                  moments.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#photographyModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- ================= ACTIVITY 6 ================= -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body text-center">
+                <i class="bi bi-compass fs-1 mb-3"></i>
+                <h5 class="card-title">City Exploration</h5>
+                <p class="text-muted">
+                  Explore exciting cities, discover hidden places, and
+                  experience local life.
+                </p>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#cityModal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MOUNTAIN HIKING MODAL -->
+    <div
+      class="modal fade"
+      id="hikingModal"
+      tabindex="-1"
+      aria-labelledby="hikingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="hikingModalLabel">
+              <i class="bi bi-compass me-2"></i>
+              Mountain Hiking
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!-- Modal Body -->
+          <div class="modal-body">
+            <!-- Activity Image -->
+            <img
+              src="https://i.pinimg.com/1200x/e8/8a/1f/e88a1f4415073a2026627ba737ea939d.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="Mountain Hiking"
+            />
+
+            <!-- About -->
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Explore beautiful mountain trails and enjoy breathtaking views of
+              Paradise Cave. This activity is perfect for visitors who enjoy
+              nature, adventure, and outdoor exploration.
+            </p>
+
+            <!-- Activities Offered -->
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Scenic mountain trails, beautiful viewpoints, nature walks, and
+                outdoor adventures.
+              </span>
+            </div>
+          </div>
+
+          <!-- Modal Footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BEACH ADVENTURE MODAL -->
+    <div
+      class="modal fade"
+      id="beachModal"
+      tabindex="-1"
+      aria-labelledby="beachModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="beachModalLabel">
+              <i class="bi bi-water me-2"></i>
+              Beach Adventure
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <img
+              src="https://i.pinimg.com/1200x/54/21/65/542165732be056c4b088113ea980fda4.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="Beach Adventure"
+            />
+
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Spend a relaxing day at the beach, swim in clear waters, and enjoy
+              the beautiful tropical scenery. It is a great activity for
+              families and friends.
+            </p>
+
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Swimming, water activities, relaxing on the beach, coastal
+                sightseeing, and sunset viewing.
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CULTURAL TOUR MODAL -->
+    <div
+      class="modal fade"
+      id="cultureModal"
+      tabindex="-1"
+      aria-labelledby="cultureModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="cultureModalLabel">
+              <i class="bi bi-building me-2"></i>
+              Cultural Tour
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <img
+              src="https://i.pinimg.com/736x/82/a7/68/82a768cbdb055b1ba9ec77115aaa4045.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="Cultural Tour"
+            />
+
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Discover the history, traditions, and local culture of the
+              destination. Learn about the people, places, and stories that make
+              the area unique.
+            </p>
+
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Historical sightseeing, cultural landmarks, local traditions,
+                local food, and cultural experiences.
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTOGRAPHY MODAL -->
+    <div
+      class="modal fade"
+      id="cyclingModal"
+      tabindex="-1"
+      aria-labelledby="cyclingModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="cyclingModalLabel">
+              <i class="bi bi-bicycle me-2"></i>
+              Cycling
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <img
+              src="https://i.pinimg.com/736x/e2/c7/c5/e2c7c5b447e628527f7cf29ccd8e3233.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="Cycling"
+            />
+
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Ride through scenic destinations and enjoy an active way to
+              explore the beautiful surroundings. Cycling is a fun option for
+              visitors who love outdoor adventures.
+            </p>
+
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Bicycle rental, scenic cycling routes, guided rides, nature
+                trails, and outdoor exploration.
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CITY EXPLORATION MODAL -->
+    <div
+      class="modal fade"
+      id="photographyModal"
+      tabindex="-1"
+      aria-labelledby="photographyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="photographyModalLabel">
+              <i class="bi bi-camera me-2"></i>
+              Photography
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <!-- Photography Image -->
+            <img
+              src="https://i.pinimg.com/736x/5d/4d/50/5d4d50ed444cdf3ef1552f9e8d21acfe.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="Photography"
+            />
+
+            <!-- About -->
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Capture beautiful landscapes, landmarks, wildlife, and
+              unforgettable moments during your visit. Photography is a great
+              way to preserve your travel memories.
+            </p>
+
+            <!-- Activities Offered -->
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Scenic photo spots, nature photography, landmark photography,
+                wildlife photography, and sunset photography.
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ============================================================ -->
+    <div
+      class="modal fade"
+      id="cityModal"
+      tabindex="-1"
+      aria-labelledby="cityModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content activity-modal">
+          <div class="modal-header">
+            <h5 class="modal-title fw-bold" id="cityModalLabel">
+              <i class="bi bi-compass me-2"></i>
+              City Exploration
+            </h5>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <img
+              src="https://i.pinimg.com/1200x/0e/17/ce/0e17ce91342f60d8ffa108dfb2f9d9cf.jpg"
+              class="img-fluid rounded activity-image mb-4"
+              alt="City Exploration"
+            />
+
+            <h5 class="fw-bold">About This Activity</h5>
+
+            <p class="text-muted">
+              Explore exciting places, discover hidden destinations, and
+              experience the local lifestyle. This activity is perfect for
+              visitors who enjoy sightseeing and discovering new places.
+            </p>
+
+            <h5 class="fw-bold mt-4">Activities Offered</h5>
+
+            <div class="offer-box">
+              <i class="bi bi-check-circle-fill"></i>
+
+              <span>
+                Local sightseeing, landmark visits, local markets, food trips,
+                hidden destinations, and cultural experiences.
+              </span>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+              data-bs-toggle="modal"
+              data-bs-target="#planTripModal"
+            >
+              <i class="bi bi-calendar-check me-1"></i>
+              Plan Your Visit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRAVEL GUIDE -->
+
+    <section id="travel-Guide" class="py-5 travel-guide">
+      <div class="container align-items-center">
+        <span class="sect-head text-uppercase small fw-semibold"
+          >Travel Guide</span
+        >
+        <h2 class="fw-bold mt-1 mb-2">Plan Your Trip</h2>
+        <p class="text-muted mb-4">
+          Everything you need to know before visiting Paradise Cave.
+        </p>
+
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3">
+            <div class="guide-card h-100 p-4 rounded-4">
+              <i class="bi bi-signpost-2 guide-icon"></i>
+              <h6 class="fw-bold mt-3 mb-2">Transportation</h6>
+              <p class="small text-muted mb-1">
+                By bus: about 2.5 hours from the city
+              </p>
+              <p class="small text-muted mb-0">
+                By car: 1.5 hours along the coastal road
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="guide-card h-100 p-4 rounded-4">
+              <i class="bi bi-ticket-perforated guide-icon"></i>
+              <h6 class="fw-bold mt-3 mb-2">Entrance Fees</h6>
+              <p class="small text-muted mb-1">₱150 per person</p>
+              <p class="small text-muted mb-0">
+                Environmental fee already included
+              </p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="guide-card h-100 p-4 rounded-4">
+              <i class="bi bi-clock guide-icon"></i>
+              <h6 class="fw-bold mt-3 mb-2">Operating Hours</h6>
+              <p class="small text-muted mb-1">Open daily, Monday to Sunday</p>
+              <p class="small text-muted mb-0">6:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-3">
+            <div class="guide-card h-100 p-4 rounded-4">
+              <i class="bi bi-backpack2 guide-icon"></i>
+              <h6 class="fw-bold mt-3 mb-2">Travel Tips</h6>
+              <p class="small text-muted mb-1">Pack water and sunblock</p>
+              <p class="small text-muted mb-0">Insect repellent helps too</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Information Alert — seasonal advisory, separated from the fact cards -->
+        <div
+          class="info-alert d-flex align-items-start gap-3 mt-4 p-4 rounded-4"
+        >
+          <i class="bi bi-info-circle-fill info-alert-icon"></i>
+          <div>
+            <h6 class="fw-bold mb-1">
+              Information Alert: Best time to visit is November to May
+            </h6>
+            <p class="small mb-0">
+              Calm seas and sunny skies make this window ideal. Outside these
+              months, expect rougher tides and possible weather-related
+              closures.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY SECTION ================= -->
+    <section id="gallery" class="gallery-section py-5">
+      <div class="container">
+        <!-- Gallery Header -->
+        <div class="gallery-heading mb-4">
+          <small class="sect-head text-uppercase">Our Gallery</small>
+          <h2>Discover The Philippine Paradise</h2>
+          <p>
+            Explore beautiful destinations, breathtaking views, and
+            unforgettable moments from Philippine Paradise.
+          </p>
+        </div>
+        <!-- Bootstrap Responsive Grid -->
+        <div class="row g-4">
+          <!-- Gallery Item 1 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSBaeCkDsu6jCQd04XSVc0-sZwryfOfcWOlYhCw7p5xg&s=10"
+                  alt="Beach"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>El Nido</h4>
+                <p>
+                  Famous for its towering limestone karst formations and hidden
+                  emerald lagoons. Must-visit spots include the Big Lagoon and
+                  Small Lagoon, which are best explored by kayak.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySuBCd8R_bSAKFHMliOPrYtohn4LmjIoFrokl2RcR4A&s=10"
+                  alt="Beach"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>Coron Palawan</h4>
+                <p>
+                  Positioned just north of mainland Palawan, it is a paradise
+                  for snorkelers and divers. It features the breathtakingly
+                  clear freshwater Kayangan Lake and pristine shipwrecks from
+                  WWII.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgttLx-d7rR_yX3uMIP8QBHt4opFoY0MDmeoEICtTgpg&s=10"
+                  alt="Hills"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>Bohol</h4>
+                <p>
+                  A diverse island where you can witness the iconic Chocolate
+                  Hills—over 1,000 symmetrical mounds that turn brown during the
+                  dry season—and visit protected sanctuaries for the tiny,
+                  big-eyed tarsier
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP0PcaDzDNgjYyLBVlM5qaT6yezWtpcUvPFH_RMBd4bw&s=10"
+                  alt="Light House"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>Batanes</h4>
+                <p>
+                  Situated at the northernmost tip of the country, Batanes
+                  features dramatic rolling green hills, rock-hewn cliffs,
+                  traditional stone houses, and a slow, peaceful lifestyle.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8aBJURvVz-wQ01I91V_7FuUb-1d_9eob0trDnTe_-7Q&s=10"
+                  alt="Falls"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>Siquijor</h4>
+                <p>
+                  A quiet island province surrounded by white beaches and
+                  mysterious local folklore. Highlights include swinging into
+                  the turquoise waters of Cambugahay Falls.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="gallery-card">
+              <div class="image-wrapper">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCJ5D_qktDPu2BFOWXLbEbePHTC8rqNByYUHUhkL1bg&s=10"
+                  alt="Island Viewpoint"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div class="gallery-info">
+                <h4>Camiguin</h4>
+                <p>
+                  Known as the "Island Born of Fire," this volcanic destination
+                  features an amazing sunken cemetery, natural hot and cold
+                  springs, and the completely bare White Island sandbar.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <h3>Paradise Cave</h3>
+            <p>Buscalan, Rizal, Philippines</p>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Quick Links</h5>
+            <a href="#Home">Home</a><br />
+            <a href="#about">About</a><br />
+            <a href="#attractions">Attractions</a><br />
+            <a href="#activities">Activities</a><br />
+            <a href="#travel-Guide">Travel Guide</a>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Explore</h5>
+            <a href="#gallery">Gallery</a><br />
+            <a href="#FaQ">FAQ</a><br />
+            <a href="#contact">Contact</a>
+          </div>
+
+          <div class="col-lg-2">
+            <h5>Follow Us</h5>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>TikTok</p>
+          </div>
+
+          <div class="col-lg-3">
+            <h5>Subscribe</h5>
+            <p>Get updates and travel tips!</p>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="E-Mail"
+                aria-label="E-Mail"
+                aria-describedby="button-addon2"
+              />
+              <button class="btn btn-info" type="button" id="button-addon2">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p>&copy; 2026 Paradise Cave. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
